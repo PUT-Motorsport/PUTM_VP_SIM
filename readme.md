@@ -4,6 +4,11 @@ PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm u
 ## Table on contents
 - [Start simulation](#start-simulation)
 - [Model description](#model-description)
+  - [Reference Generator](#reference-generator)
+  - [Upper Controller](#upper-controler)
+  - [Normal Load Transfer](#normal-load-transfer)
+  - [Torque Allocator: Dynamic Distribution](#torque-allocator:-dynamic-distribution)
+  - [Dynamic Distribution Method](#dynamic-distribution-method)
 - [Variables description](#variables)
 - [Driver training and behavior](#driver)
 

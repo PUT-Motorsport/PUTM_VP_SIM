@@ -4,7 +4,7 @@ PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm u
 ## Table on contents
 - [Start simulation](#start-simulation)
 - [Model description](#model-description)
-- [Variable description](#variables)
+- [Variables description](#variables)
 - [Driver training and behavior](#driver)
 
 ## Start simulation
@@ -93,21 +93,31 @@ where:
 - $l_s$ is the half-width of the vehicle.
 
 <a name="variables"></a>
-## Variable description
+## Variables description
 All variables you can find in file _script.m_
 
 List of variables and their placement:
 
 ki=0.05; % gain of integrating controller - Upper Controller
+
 kp=0.5; % gain of proportional controller - Upper Controller
+
 g=9.81; % gravity acceleration - Torque distribution - FZFL, FZFR, etc. and T_FL, T_FR, etc.
+
 L=2.6; % axle base - Reference Generator and Torque distribution - FZFL, FZFR, etc.
+
 lr=0.5; % distance between rear axle to CoG - Torque distribution - FZFL, FZFR, etc.
+
 lf=2.1; % distance between front axle to CoG - Torque distribution - FZFL, FZFR, etc.
+
 h=0.25; % height of CoG - Torque distribution - FZFL, FZFR, etc. 
+
 m=180; % car mass - Torque distribution - FZFL, FZFR, etc. and T_FL, T_FR, etc.
+
 ls=1.242; % wheelbase - Torque distribution - FZFL, FZFR, etc. and T_FL, T_FR, etc.
+
 rw=0.217; % wheel radius - Speed Estimator and Torque distribution - T_FL, T_FR, etc.
+
 drive_ratio=10; % ratio of main gearbox - Torque distribution
 
 <a name="driver"></a>

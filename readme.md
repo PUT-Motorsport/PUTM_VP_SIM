@@ -1,6 +1,11 @@
 # PUTM_VP_SIM
 ## Introduction
 PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm using CarMaker and Simulink.
+## Table on contents
+- [Start simulation] (#start-simulation)
+- [Model description] (#model-description)
+- [Variable description] (#variables)
+- [Driver training and behavior] (#driver)
 
 ## Start simulation
 Downlad src_cm4sl.zip file and unpack this.
@@ -12,7 +17,7 @@ If we have different path to our IPG package, we must change _cminstdir_ variabl
 After running cmenv.m script, we can run the script.m file. This file contains constants values for our model. Further description
 of these values is availble in [Variable Description](#variables) section.
 
-Next step is opening the exact model we are working on. Run OPENXWD.mdl which is Simulink model of the car. Click on Open CarMaker GUI. CarMaker window is going to pop up, where we have to choose model of the car. [zdjęcie]. Then choose the track [zdjecie]. Now CarMaker is ready to run. We can make it by either pressing start button in CarMaker GUI or by running Simulink, but there is one more thing to do and it's driver adaptation. Firstly, change driver type to racing driver[zdjecie]. There are 2 types of driver adaptation programs[zdjecie]. The first one is to learn the basic steering of the car and it lasts for about half an hour. TO shorten this time we ca change the speed of simulation[zdjecie]. Second one is to learn the track and it's optional (the first training is enough for the driver to be consistent and fast). More about behavior and training of the driver can be read in![Driver training and behavior](#driver) section.
+Next step is opening the exact model we are working on. Run OPENXWD.mdl which is Simulink model of the car. Click on Open CarMaker GUI. CarMaker window is going to pop up, where we have to choose model of the car. [zdjęcie]. Then choose the track [zdjecie]. Now CarMaker is ready to run. We can make it by either pressing start button in CarMaker GUI or by running Simulink, but there is one more thing to do and it's driver adaptation. Firstly, change driver type to racing driver[zdjecie]. There are 2 types of driver adaptation programs[zdjecie]. The first one is to learn the basic steering of the car and it lasts for about half an hour. TO shorten this time we ca change the speed of simulation[zdjecie]. Second one is to learn the track and it's optional (the first training is enough for the driver to be consistent and fast). More about behavior and training of the driver can be read in [Driver training and behavior](#driver) section.
 Navigation to Torque Vectoring model: CarMaker -> IPG Vehicle -> TV
 
 ## Model description

@@ -2,10 +2,10 @@
 ## Introduction
 PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm using CarMaker and Simulink.
 ## Table on contents
-- [Start simulation] (#start-simulation)
-- [Model description] (#model-description)
-- [Variable description] (#variables)
-- [Driver training and behavior] (#driver)
+- [Start simulation](#start-simulation)
+- [Model description](#model-description)
+- [Variable description](#variables)
+- [Driver training and behavior](#driver)
 
 ## Start simulation
 Downlad src_cm4sl.zip file and unpack this.

@@ -11,9 +11,9 @@ PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm u
   - [Dynamic Distribution Method](#dynamic-distribution-method)
 - [Variables description](#variables)
 - [IPGDriver's Learning and Adaptation Mechanisms](#driver)
-  -[Learning Procedure](#learning-procedure)
-  -[Adaptation Mechanisms](#adaptation-mechanisms)
-  -[Use Cases Demonstrating Repeatability and Accuracy](#use-cases-demonstrating-repeatability-and-accuracy)
+  - [Learning Procedure](#learning-procedure)
+  - [Adaptation Mechanisms](#adaptation-mechanisms)
+  - [Use Cases Demonstrating Repeatability and Accuracy](#use-cases-demonstrating-repeatability-and-accuracy)
 
 ## Start simulation
 Downlad src_cm4sl.zip file and unpack this.

@@ -1,7 +1,7 @@
 # PUTM_VP_SIM
 ## Introduction
 PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm using CarMaker and Simulink.
-## Table on contents
+## Table of contents
 - [Start simulation](#start-simulation)
 - [Model description](#model-description)
   - [Reference Generator](#reference-generator)
@@ -10,7 +10,7 @@ PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm u
   - [Torque Allocator: Dynamic Distribution](#torque-allocator-dynamic-distribution)
   - [Dynamic Distribution Method](#dynamic-distribution-method)
 - [Variables description](#variables)
-- [Driver training and behavior](#driver)
+- [IPGDriver's Learning and Adaptation Mechanisms](#driver)
 
 ## Start simulation
 Downlad src_cm4sl.zip file and unpack this.
@@ -126,7 +126,43 @@ rw=0.217; % wheel radius - Speed Estimator and Torque distribution - T_FL, T_FR,
 drive_ratio=10; % ratio of main gearbox - Torque distribution
 
 <a name="driver"></a>
-## Driver training and behavior
-Tu bedzie driver ale jeszcze go nie ma
+## IPGDriver's Learning and Adaptation Mechanisms
+1. Learning Procedure
+IPGDriver incorporates a detailed learning procedure designed to ensure the driver model accurately reflects real-world driving behavior through systematic learning and adaptation. This procedure is essential for ensuring that the driver in the simulation can handle various driving conditions consistently and predictably.
+
+Basic Knowledge Phase:
+
+This phase involves initial parameter estimation based on simple maneuvers. For example, a step input is applied to the steering wheel, and the system measures the vehicle's response times. These responses help in determining the preview times (tPreview) and other crucial parameters.
+The driver model adjusts its parameters iteratively to better match the desired course. For instance, if the vehicle initially deviates from a U-turn, adjustments are made until the model can accurately and consistently follow the desired path​​.
+Longitudinal Dynamics:
+
+This aspect of the learning involves optimizing acceleration and braking responses. The system learns how to manage speed based on the vehicle's dynamics and the required driving task, such as maintaining a specific speed profile or achieving a target velocity efficiently.
+Parameters like throttle response and braking force are fine-tuned to ensure smooth and realistic longitudinal control, minimizing deviations from the desired speed​​.
+Lateral Dynamics:
+
+In lateral dynamics, the system focuses on steering accuracy. By collecting data on how the vehicle responds to steering inputs, the model can adjust its steering behavior to follow the intended path more closely.
+The system uses gathered data to refine preview times and steering angles, ensuring the vehicle can navigate turns and maintain lane position accurately​​.
+2. Adaptation Mechanisms
+IPGDriver's adaptation mechanisms ensure that the driver model evolves and improves its performance over time, learning from each simulation run.
+
+Driver Adaption:
+
+The driver model adapts to the vehicle's specific characteristics, such as its handling and response to inputs. This adaptation is crucial for ensuring that the model can handle the vehicle under various conditions consistently.
+The adaption process includes continuous learning from the vehicle's reactions, which helps in fine-tuning the control actions for steering, throttle, and braking​​.
+Race Driver Adaption:
+
+For high-performance scenarios, such as racing, the driver model undergoes specialized adaption. This phase involves optimizing the driver model to achieve the best possible performance on a track, focusing on maximizing speed while maintaining control.
+This optimization process includes monitoring and adjusting parameters related to longitudinal and lateral slip, ensuring that the vehicle can navigate the track at high speeds with precision​​.
+3. Use Cases Demonstrating Repeatability and Accuracy
+Several use cases illustrate how IPGDriver's learning and adaptation ensure repeatability and accuracy in simulations.
+
+ISO Lane Change:
+
+The ISO lane change use case highlights the system's ability to improve performance through learning. Initially, an untrained driver model may struggle to follow the lane change maneuver accurately. However, after the learning process, the driver model can execute the lane change with high precision, demonstrating the system's ability to reduce variability and enhance control​​.
+Following a Speed Profile:
+
+In scenarios where the vehicle needs to follow a predefined speed profile, IPGDriver can maintain the desired speed with minimal deviation. This capability is a direct result of the driver model's learning and adaptation, which ensures that the vehicle's velocity closely aligns with the target speed throughout the simulation​​.
+Conclusion
+IPGDriver's comprehensive learning and adaptation mechanisms ensure that the driver model can handle various driving scenarios with consistency and accuracy. The process involves iterative learning, fine-tuning of control parameters, and specialized adaptations for different driving tasks. These capabilities make IPGDriver a robust tool for simulating realistic driving behavior and evaluating the performance of driving algorithms, providing reliable insights into how these algorithms might perform in real-world conditions.
 
 

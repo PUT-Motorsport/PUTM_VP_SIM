@@ -11,6 +11,9 @@ PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm u
   - [Dynamic Distribution Method](#dynamic-distribution-method)
 - [Variables description](#variables)
 - [IPGDriver's Learning and Adaptation Mechanisms](#driver)
+  -[Learning Procedure](#learning-procedure)
+  -[Adaptation Mechanisms](#adaptation-mechanisms)
+  -[Use Cases Demonstrating Repeatability and Accuracy](#use-cases-demonstrating-repeatability-and-accuracy)
 
 ## Start simulation
 Downlad src_cm4sl.zip file and unpack this.
@@ -127,7 +130,7 @@ drive_ratio=10; % ratio of main gearbox - Torque distribution
 
 <a name="driver"></a>
 ## IPGDriver's Learning and Adaptation Mechanisms
-1. Learning Procedure
+### Learning Procedure
 IPGDriver incorporates a detailed learning procedure designed to ensure the driver model accurately reflects real-world driving behavior through systematic learning and adaptation. This procedure is essential for ensuring that the driver in the simulation can handle various driving conditions consistently and predictably.
 
 Basic Knowledge Phase:
@@ -142,7 +145,7 @@ Lateral Dynamics:
 
 In lateral dynamics, the system focuses on steering accuracy. By collecting data on how the vehicle responds to steering inputs, the model can adjust its steering behavior to follow the intended path more closely.
 The system uses gathered data to refine preview times and steering angles, ensuring the vehicle can navigate turns and maintain lane position accurately​​.
-2. Adaptation Mechanisms
+### Adaptation Mechanisms
 IPGDriver's adaptation mechanisms ensure that the driver model evolves and improves its performance over time, learning from each simulation run.
 
 Driver Adaption:
@@ -153,7 +156,7 @@ Race Driver Adaption:
 
 For high-performance scenarios, such as racing, the driver model undergoes specialized adaption. This phase involves optimizing the driver model to achieve the best possible performance on a track, focusing on maximizing speed while maintaining control.
 This optimization process includes monitoring and adjusting parameters related to longitudinal and lateral slip, ensuring that the vehicle can navigate the track at high speeds with precision​​.
-3. Use Cases Demonstrating Repeatability and Accuracy
+### Use Cases Demonstrating Repeatability and Accuracy
 Several use cases illustrate how IPGDriver's learning and adaptation ensure repeatability and accuracy in simulations.
 
 ISO Lane Change:

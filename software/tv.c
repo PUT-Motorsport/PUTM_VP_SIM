@@ -46,11 +46,11 @@ static void read_values()
   tv_P.WheelSp_FR_Value = 0;
   tv_P.WheelSp_RL_Value = 0;
   tv_P.WheelSp_RR_Value = 0;
-  tv_P.acc_pedal_Value = 1;
+  tv_P.acc_pedal_Value = 1; // Acceleration pedal 0-1
   tv_P.ax_Value = 0;
   tv_P.ay_Value = 0;
-  tv_P.brake_pedal_Value = 0;
-  tv_P.delta_Value = 0;
+  tv_P.brake_pedal_Value = 0; // Brake pedal 0-1
+  tv_P.delta_Value = 0; // Steering angle
   tv_P.yaw_rate_Value = 0;
 }
 static void rt_ertODEUpdateContinuousStates(RTWSolverInfo *si)

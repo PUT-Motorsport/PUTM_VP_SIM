@@ -179,8 +179,7 @@ By gathering data on how the vehicle responds to specific inputs and adjusting p
 
 The adaptation process involves learning from the vehicle's specific handling characteristics, further ensuring that the driver’s responses are based on empirical data and optimized parameters.
 
-####
-The research and development work was carried out was a part of the Student Scientific Clubs Create Innovations (SKNTI) program. [Ministry of Science and Higher Education](https://www.gov.pl/web/nauka)
+### The research and development work was carried out was a part of the Student Scientific Clubs Create Innovations (SKNTI) program. [Ministry of Science and Higher Education](https://www.gov.pl/web/nauka)
 
 
 

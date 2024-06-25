@@ -3,13 +3,13 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: tv_private.h
+ * File: model_private.h
  *
- * Code generated for Simulink model 'tv'.
+ * Code generated for Simulink model 'model'.
  *
- * Model version                  : 1.19
+ * Model version                  : 1.13
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Jun 17 15:23:14 2024
+ * C/C++ source code generated on : Tue Jun 25 15:58:24 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -17,10 +17,10 @@
  * Validation result: Not run
  */
 
-#ifndef tv_private_h_
-#define tv_private_h_
+#ifndef model_private_h_
+#define model_private_h_
 #include "rtwtypes.h"
-#include "tv_types.h"
+#include "model_types.h"
 #include "rtw_continuous.h"
 #include "rtw_solver.h"
 
@@ -38,9 +38,9 @@
 #endif
 
 /* private model entry point functions */
-extern void tv_derivatives(void);
+extern void model_derivatives(void);
 
-#endif                                 /* tv_private_h_ */
+#endif                                 /* model_private_h_ */
 
 /*
  * File trailer for generated code.

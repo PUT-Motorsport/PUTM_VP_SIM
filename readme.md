@@ -1,3 +1,5 @@
+
+
 # PUTM_VP_SIM
 ## Introduction
 PUT Motorsport Vehicle Performance group project of Torque Vectoring algorithm using CarMaker and Simulink.
@@ -244,6 +246,7 @@ By gathering data on how the vehicle responds to specific inputs and adjusting p
 The adaptation process involves learning from the vehicle's specific handling characteristics, further ensuring that the driver’s responses are based on empirical data and optimized parameters.
 
 ### The research and development work was carried out was a part of the Student Scientific Clubs Create Innovations (SKNTI) program. [Ministry of Science and Higher Education](https://www.gov.pl/web/nauka)
+![baner-sknti](https://github.com/PUT-Motorsport/PUTM_VP_SIM/assets/64833115/6471b760-8a2b-4a6e-99b0-7c81398ade27)
 
 
 

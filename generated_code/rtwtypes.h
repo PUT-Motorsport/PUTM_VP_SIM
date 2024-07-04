@@ -5,11 +5,11 @@
  *
  * File: rtwtypes.h
  *
- * Code generated for Simulink model 'model'.
+ * Code generated for Simulink model 'tv'.
  *
- * Model version                  : 1.13
+ * Model version                  : 1.6
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Jun 25 15:58:24 2024
+ * C/C++ source code generated on : Fri Jul  5 00:15:46 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)

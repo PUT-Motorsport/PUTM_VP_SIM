@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'tv'.
  *
- * Model version                  : 1.6
+ * Model version                  : 1.9
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Jul  5 00:15:46 2024
+ * C/C++ source code generated on : Thu Jul 11 14:41:52 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -33,7 +33,6 @@
  * your application needs.  This example simply sets an error status in the
  * real-time model and returns from rt_OneStep.
  */
-
 void rt_OneStep(void);
 void rt_OneStep(void)
 {
@@ -87,10 +86,10 @@ int_T main(int_T argc, const char *argv[])
   while (rtmGetErrorStatus(tv_M) == (NULL)&& !rtmGetStopRequested(tv_M)) {
     read_inputs();
     rt_OneStep();
-    printf("Front left %f\n",tv_B.Trq_FL_scaled);
-    printf("Front right %f\n",tv_B.Trq_FR_scaled);
-    printf("Rear left %f\n",tv_B.Trq_RL_scaled);
-    printf("Rear right %f\n",tv_B.Trq_RR_scaled);
+    printf("FL: %f\n",tv_B.Trq_FL_scaled);
+    printf("FR: %f\n",tv_B.Trq_FR_scaled);
+    printf("RL: %f\n",tv_B.Trq_RL_scaled);
+    printf("RR: %f\n",tv_B.Trq_RR_scaled);
   }
 
   /* Terminate model */

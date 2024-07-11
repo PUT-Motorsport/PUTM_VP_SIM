@@ -14,6 +14,12 @@ ls=1.242;
 rw=0.217;
 drive_ratio=10;
 A=0;
+
+% Wartości power_limiter
+Ki_pl = 0.01;
+Kp_pl = 0.1;
+Ts = 0.01;
+
 % Otwórz model
 open_system('tv');
 

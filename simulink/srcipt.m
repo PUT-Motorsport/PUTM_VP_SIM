@@ -19,6 +19,7 @@ A=0;
 Ki_pl = 0.01;
 Kp_pl = 0.1;
 Ts = 0.01;
+P_max = 79;
 
 % Otwórz model
 open_system('tv');

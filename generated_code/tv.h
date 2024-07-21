@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'tv'.
  *
- * Model version                  : 1.9
+ * Model version                  : 1.43
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Thu Jul 11 14:41:52 2024
+ * C/C++ source code generated on : Sun Jul 21 12:27:19 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -80,21 +80,16 @@ typedef struct {
   real_T Trq_RL;                       /* '<S4>/Trq_RL' */
   real_T Trq_RR;                       /* '<S4>/Trq_RR' */
   real_T Gain1_e;                      /* '<S9>/Gain1' */
-  real_T Trq_FL_scaled;                /* '<S18>/MATLAB Function1' */
-  real_T Trq_FR_scaled;                /* '<S18>/MATLAB Function1' */
-  real_T Trq_RL_scaled;                /* '<S18>/MATLAB Function1' */
-  real_T Trq_RR_scaled;                /* '<S18>/MATLAB Function1' */
+  real_T Trq_FL_scaled;                /* '<S18>/MATLAB Function' */
+  real_T Trq_FR_scaled;                /* '<S18>/MATLAB Function' */
+  real_T Trq_RL_scaled;                /* '<S18>/MATLAB Function' */
+  real_T Trq_RR_scaled;                /* '<S18>/MATLAB Function' */
   real_T Sum;                          /* '<S9>/Sum' */
   real_T Product;                      /* '<S16>/Product' */
   real_T Product_b;                    /* '<S17>/Product' */
   real_T Gain_b;                       /* '<S13>/Gain' */
   real_T Gain2;                        /* '<S13>/Gain2' */
 } B_tv_T;
-
-/* Block states (default storage) for system '<Root>' */
-typedef struct {
-  real_T integral_error;               /* '<S18>/MATLAB Function1' */
-} DW_tv_T;
 
 /* Continuous states (default storage) */
 typedef struct {
@@ -124,12 +119,6 @@ typedef struct {
 
 /* Parameters (default storage) */
 struct P_tv_T_ {
-  real_T Ki_pl;                        /* Variable: Ki_pl
-                                        * Referenced by: '<S18>/Ki_pl'
-                                        */
-  real_T Kp_pl;                        /* Variable: Kp_pl
-                                        * Referenced by: '<S18>/Kp_pl'
-                                        */
   real_T L;                            /* Variable: L
                                         * Referenced by:
                                         *   '<S5>/axlebase'
@@ -138,8 +127,13 @@ struct P_tv_T_ {
                                         *   '<S12>/Gain'
                                         *   '<S13>/Gain'
                                         */
-  real_T Ts;                           /* Variable: Ts
-                                        * Referenced by: '<S18>/Ts_pl'
+  real_T P_max;                        /* Variable: P_max
+                                        * Referenced by: '<S18>/Constant'
+                                        */
+  real_T drive_ratio;                  /* Variable: drive_ratio
+                                        * Referenced by:
+                                        *   '<S7>/Torque_ub'
+                                        *   '<S8>/Constant1'
                                         */
   real_T g;                            /* Variable: g
                                         * Referenced by:
@@ -199,6 +193,11 @@ struct P_tv_T_ {
                                         *   '<S16>/Gain1'
                                         *   '<S17>/Gain1'
                                         */
+  real_T max_moment;                   /* Variable: max_moment
+                                        * Referenced by:
+                                        *   '<S7>/Torque_ub'
+                                        *   '<S8>/Constant1'
+                                        */
   real_T rw;                           /* Variable: rw
                                         * Referenced by:
                                         *   '<S6>/Gain1'
@@ -222,8 +221,8 @@ struct P_tv_T_ {
   real_T Gain_Gain;                    /* Expression: 1/4
                                         * Referenced by: '<S6>/Gain'
                                         */
-  real_T yaw_rate_Value;               /* Expression: 1
-                                        * Referenced by: '<S2>/yaw_rate'
+  real_T delta_Value;                  /* Expression: 1
+                                        * Referenced by: '<S2>/delta'
                                         */
   real_T Constant_Value;               /* Expression: 1
                                         * Referenced by: '<S5>/Constant'
@@ -231,17 +230,14 @@ struct P_tv_T_ {
   real_T Gain1_Gain;                   /* Expression: 1/2500
                                         * Referenced by: '<S5>/Gain1'
                                         */
-  real_T delta_Value;                  /* Expression: 1
-                                        * Referenced by: '<S2>/delta'
+  real_T yaw_rate_Value;               /* Expression: 1
+                                        * Referenced by: '<S2>/yaw_rate'
                                         */
   real_T Gain_Gain_p;                  /* Expression: 0.5
                                         * Referenced by: '<S9>/Gain'
                                         */
   real_T Integrator_IC;                /* Expression: 0
                                         * Referenced by: '<S9>/Integrator'
-                                        */
-  real_T Constant1_Value;              /* Expression: 84
-                                        * Referenced by: '<S8>/Constant1'
                                         */
   real_T acc_pedal_Value;              /* Expression: 1
                                         * Referenced by: '<S2>/acc_pedal'
@@ -255,14 +251,8 @@ struct P_tv_T_ {
   real_T ay_Value;                     /* Expression: 1
                                         * Referenced by: '<S2>/ay'
                                         */
-  real_T Torque_ub_Value;              /* Expression: 21
-                                        * Referenced by: '<S7>/Torque_ub'
-                                        */
-  real_T eta1_Value;                   /* Expression: 97
+  real_T eta1_Value;                   /* Expression: 0.97
                                         * Referenced by: '<S18>/eta1'
-                                        */
-  real_T P_max1_Value;                 /* Expression: 79
-                                        * Referenced by: '<S18>/P_max1'
                                         */
   real_T Trq_FL_Gain;                  /* Expression: 1
                                         * Referenced by: '<S4>/Trq_FL'
@@ -338,9 +328,6 @@ extern X_tv_T tv_X;
 /* Disabled states (default storage) */
 extern XDis_tv_T tv_XDis;
 
-/* Block states (default storage) */
-extern DW_tv_T tv_DW;
-
 /* Model entry point functions */
 extern void tv_initialize(void);
 extern void tv_step(void);
@@ -382,7 +369,7 @@ extern RT_MODEL_tv_T *const tv_M;
  * '<S16>'  : 'tv/TorqueVectoring/TorqueVectoring/Torque distribution/T_FR1'
  * '<S17>'  : 'tv/TorqueVectoring/TorqueVectoring/Torque distribution/T_RL'
  * '<S18>'  : 'tv/TorqueVectoring/power_limiter_system/power_limiter'
- * '<S19>'  : 'tv/TorqueVectoring/power_limiter_system/power_limiter/MATLAB Function1'
+ * '<S19>'  : 'tv/TorqueVectoring/power_limiter_system/power_limiter/MATLAB Function'
  */
 #endif                                 /* tv_h_ */
 

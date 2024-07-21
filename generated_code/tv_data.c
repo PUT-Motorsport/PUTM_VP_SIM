@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'tv'.
  *
- * Model version                  : 1.9
+ * Model version                  : 1.43
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Thu Jul 11 14:41:52 2024
+ * C/C++ source code generated on : Sun Jul 21 12:27:19 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -21,16 +21,6 @@
 
 /* Block parameters (default storage) */
 P_tv_T tv_P = {
-  /* Variable: Ki_pl
-   * Referenced by: '<S18>/Ki_pl'
-   */
-  0.01,
-
-  /* Variable: Kp_pl
-   * Referenced by: '<S18>/Kp_pl'
-   */
-  0.1,
-
   /* Variable: L
    * Referenced by:
    *   '<S5>/axlebase'
@@ -41,10 +31,17 @@ P_tv_T tv_P = {
    */
   2.6,
 
-  /* Variable: Ts
-   * Referenced by: '<S18>/Ts_pl'
+  /* Variable: P_max
+   * Referenced by: '<S18>/Constant'
    */
-  0.01,
+  7900.0,
+
+  /* Variable: drive_ratio
+   * Referenced by:
+   *   '<S7>/Torque_ub'
+   *   '<S8>/Constant1'
+   */
+  14.25,
 
   /* Variable: g
    * Referenced by:
@@ -116,6 +113,13 @@ P_tv_T tv_P = {
    */
   180.0,
 
+  /* Variable: max_moment
+   * Referenced by:
+   *   '<S7>/Torque_ub'
+   *   '<S8>/Constant1'
+   */
+  9.8,
+
   /* Variable: rw
    * Referenced by:
    *   '<S6>/Gain1'
@@ -152,7 +156,7 @@ P_tv_T tv_P = {
   0.25,
 
   /* Expression: 1
-   * Referenced by: '<S2>/yaw_rate'
+   * Referenced by: '<S2>/delta'
    */
   1.0,
 
@@ -167,7 +171,7 @@ P_tv_T tv_P = {
   0.0004,
 
   /* Expression: 1
-   * Referenced by: '<S2>/delta'
+   * Referenced by: '<S2>/yaw_rate'
    */
   1.0,
 
@@ -180,11 +184,6 @@ P_tv_T tv_P = {
    * Referenced by: '<S9>/Integrator'
    */
   0.0,
-
-  /* Expression: 84
-   * Referenced by: '<S8>/Constant1'
-   */
-  84.0,
 
   /* Expression: 1
    * Referenced by: '<S2>/acc_pedal'
@@ -206,20 +205,10 @@ P_tv_T tv_P = {
    */
   1.0,
 
-  /* Expression: 21
-   * Referenced by: '<S7>/Torque_ub'
-   */
-  21.0,
-
-  /* Expression: 97
+  /* Expression: 0.97
    * Referenced by: '<S18>/eta1'
    */
-  97.0,
-
-  /* Expression: 79
-   * Referenced by: '<S18>/P_max1'
-   */
-  79.0,
+  0.97,
 
   /* Expression: 1
    * Referenced by: '<S4>/Trq_FL'

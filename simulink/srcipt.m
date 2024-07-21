@@ -12,14 +12,12 @@ h=0.25;
 m=180;
 ls=1.242;
 rw=0.217;
-drive_ratio=10;
+drive_ratio=14.25;
+max_moment = 9.8
 A=0;
 
 % Wartości power_limiter
-Ki_pl = 0.01;
-Kp_pl = 0.1;
-Ts = 0.01;
-P_max = 79;
+P_max = 7900;
 
 % Otwórz model
 open_system('tv');

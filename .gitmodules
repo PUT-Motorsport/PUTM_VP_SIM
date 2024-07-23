@@ -1,0 +1,3 @@
+[submodule "putm_sim_gen"]
+	path = putm_sim_gen
+	url = git@github.com:PUT-Motorsport/putm_sim_gen.git

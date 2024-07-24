@@ -1,36 +1,12 @@
-clc;
-clear all;
-close all;
-
-ki=1;
-kp=1;
 g=9.81;
-L=2.6;
-lr=0.5;
-lf=2.1;
+L=2.5;
+lr=1;
+lf=1.5;
 h=0.25;
 m=180;
 ls=1.242;
 rw=0.217;
 drive_ratio=14.25;
-max_moment = 9.8
 A=0;
-
-% Wartości power_limiter
-P_max = 7900;
-
-% Otwórz model
-open_system('tv');
-
-% Pobierz aktualny zestaw konfiguracji
-cs = getActiveConfigSet('tv');
-
-set_param(cs, 'BlockReduction', 'off'); % Wyłączenie redukcji bloków
-set_param(cs, 'InlineParams', 'off'); % Wyłączenie inliningu parametrów
-
-
-% Zapisz zmiany
-save_system('tv');
-
-
-
+min_yaw_rate=0.01;
+Ku=1/2500;

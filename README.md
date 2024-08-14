@@ -103,7 +103,6 @@ where:
 - $r_w$ is the wheel radius,
 - $l_s$ is the half-width of the vehicle.
 
-Sure! Here is the README describing the power limiting system for a Formula Student car in English:
 
 
 ## Car Power Limiting System
